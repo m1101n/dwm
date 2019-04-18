@@ -73,6 +73,7 @@ static const char *brightness_up[]  = { "brightness", "up", NULL };
 static const char *brightness_down[]= { "brightness", "down", NULL };
 static const char *lock_screen[]	= { "slock", NULL };
 static const char *firefox[]		= { "firefox", NULL };
+static const char *telegram[]		= { "Telegram", NULL };
 
 #include "movestack.c"
 
@@ -104,6 +105,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 
+	/* Audio and brightness control */
 	{ 0,                            XF86AudioMute,			spawn, {.v = audio_mute } },
 	{ 0,                            XF86AudioLowerVolume,	spawn, {.v = lower_volume } },
 	{ 0,                            XF86AudioRaiseVolume,	spawn, {.v = raise_volume } },
@@ -122,8 +124,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 
 	{ MODKEY,                       XK_F2, 		spawn,       	{.v = firefox } },
+	{ MODKEY,                       XK_F9, 		spawn,       	{.v = telegram } },
 
-	{ MODKEY,	                XK_Delete, spawn,          {.v = lock_screen } },
+	{ MODKEY,	                	XK_Delete, spawn,          {.v = lock_screen } },
 	{ MODKEY|ShiftMask,             XK_Delete, quit,           {0} },
 };
 
