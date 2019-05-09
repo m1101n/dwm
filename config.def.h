@@ -20,16 +20,17 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "\xef\x84\xa0", "\xef\x89\xa9", "3", "4", "5", "6", "7", "\xef\x80\x81", "\xef\x8b\x86" };
+static const char *tags[] = { "\xef\x84\xa0", "\xef\x89\xa9", "3", "4", "5", "6", "\xef\x80\x81", "\xef\x82\x84", "\xef\x8b\x86" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Telegram", NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	/* class      instance    	title       tags mask     isfloating   monitor */
+	{ "Telegram", 	NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "keepassxc",	NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "Firefox",  	NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
 /* layout(s) */
