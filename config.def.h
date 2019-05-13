@@ -75,6 +75,7 @@ static const char *brightness_down[]= { "brightness", "down", NULL };
 static const char *lock_screen[]	= { "slock", NULL };
 static const char *firefox[]		= { "firefox", NULL };
 static const char *telegram[]		= { "Telegram", NULL };
+static const char *keepassxc[]		= { "keepassxc", NULL };
 
 #include "movestack.c"
 
@@ -125,6 +126,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 
 	{ MODKEY,                       XK_F2, 		spawn,       	{.v = firefox } },
+	{ MODKEY,                       XK_F8, 		spawn,       	{.v = keepassxc } },
 	{ MODKEY,                       XK_F9, 		spawn,       	{.v = telegram } },
 
 	{ MODKEY,	                	XK_Delete, spawn,          {.v = lock_screen } },
