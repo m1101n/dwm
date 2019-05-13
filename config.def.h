@@ -126,8 +126,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 
+	/* Funktion Keys */
+	{ MODKEY,                       XK_F1, 		spawn,       	{.v = htop } },
 	{ MODKEY,                       XK_F2, 		spawn,       	{.v = firefox } },
-	{ MODKEY,                       XK_F6, 		spawn,       	{.v = htop } },
 	{ MODKEY,                       XK_F8, 		spawn,       	{.v = keepassxc } },
 	{ MODKEY,                       XK_F9, 		spawn,       	{.v = telegram } },
 
