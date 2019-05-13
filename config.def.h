@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "\xef\x84\xa0", "\xef\x89\xa9", "3", "4", "5", "6", "\xef\x80\x81", "\xef\x82\x84", "\xef\x8b\x86" };
+static const char *tags[] = { "\xef\x84\xa0", "\xef\x89\xa9", "3", "4", "5", "\xef\x84\x89", "\xef\x80\x81", "\xef\x82\x84", "\xef\x8b\x86" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -76,6 +76,7 @@ static const char *lock_screen[]	= { "slock", NULL };
 static const char *firefox[]		= { "firefox", NULL };
 static const char *telegram[]		= { "Telegram", NULL };
 static const char *keepassxc[]		= { "keepassxc", NULL };
+static const char *htop[]			= { "st", "-e", "htop", NULL };
 
 #include "movestack.c"
 
@@ -126,6 +127,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 
 	{ MODKEY,                       XK_F2, 		spawn,       	{.v = firefox } },
+	{ MODKEY,                       XK_F6, 		spawn,       	{.v = htop } },
 	{ MODKEY,                       XK_F8, 		spawn,       	{.v = keepassxc } },
 	{ MODKEY,                       XK_F9, 		spawn,       	{.v = telegram } },
 
