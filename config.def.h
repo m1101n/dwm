@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	/* class      instance    	title       tags mask     isfloating   monitor */
 	{ "Telegram", 	NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "keepassxc",	NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "emacs",  	NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Firefox",  	NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
@@ -77,6 +78,7 @@ static const char *firefox[]		= { "firefox", NULL };
 static const char *telegram[]		= { "Telegram", NULL };
 static const char *keepassxc[]		= { "keepassxc", NULL };
 static const char *htop[]			= { "st", "-e", "htop", NULL };
+static const char *emacs[]			= { "emacs", NULL };
 
 #include "movestack.c"
 
@@ -85,6 +87,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
+	{ MODKEY,                       XK_e,      spawn,          {.v = emacs } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
