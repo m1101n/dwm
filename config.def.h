@@ -136,7 +136,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F9, 		spawn,       	{.v = telegram } },
 
 	{ MODKEY,	                	XK_Delete, spawn,          {.v = lock_screen } },
-	{ MODKEY|ShiftMask|ControlMask,     XK_Delete, quit,           {0} }, 
+	{ MODKEY|ShiftMask|ControlMask, XK_Delete, quit,           {0} }, 
 };
 
 /* button definitions */
