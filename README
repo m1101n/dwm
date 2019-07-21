@@ -46,3 +46,6 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+To replicate m1101n's configurations merge each branch into the master branch.
+Each branch is representing a patch, that gives dwm a new feature or different look.
